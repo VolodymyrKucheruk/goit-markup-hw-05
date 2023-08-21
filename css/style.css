@@ -901,9 +901,20 @@ svg {
   color: var(--navyblue-modal-color, rgba(46, 47, 66, 0.4));
 }
 .modal-form-checkbox-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .modal-form-agreement {
   display: block;
   font-size: 12px;
@@ -913,22 +924,27 @@ svg {
   margin-top: 0;
 }
 .agreement-checkbox {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
+  color: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  fill: transparent;
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-input[type='checkbox']:checked ~ .agreement-checkbox {
+.agreement-checkbox-icon {
+  fill: currentColor;
+}
+
+input[type='checkbox']:checked ~ .modal-form-agreement > .agreement-checkbox {
   background-color: var(--ocean-color);
   border: none;
-  fill: var(--cloud-color);
+  color: var(--cloud-color);
 }
 .modal-form-link {
   color: var(--iris-color);
