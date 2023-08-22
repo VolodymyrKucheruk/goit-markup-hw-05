@@ -137,7 +137,7 @@ svg {
   bottom: -1px;
   left: 0;
 }
-.nav-items-link .current::after {
+.nav-items-link.current::after {
   background-color: #fff;
 }
 .studio-link-element {
@@ -808,7 +808,6 @@ svg {
 }
 .modal-btn:hover,
 .modal-btn:focus {
-  fill: var(--white-main-color);
   background-color: var(--ocean-color);
   border: none;
 }
@@ -821,6 +820,7 @@ svg {
   border: none;
 }
 .modal-btn-icon {
+  fill: var(--navyblue-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-caption {
