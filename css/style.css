@@ -941,10 +941,10 @@ svg {
 input:checked + label > span {
   background-color: var(--ocean-color);
   border: none;
-  fill: currentColor;
+  fill: var(--cloud-color);
 }
 .agreement-checkbox-icon {
-  fill: currentColor;
+  fill: inherit;
 }
 .modal-form-link {
   color: var(--iris-color);
